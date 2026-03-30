@@ -6,4 +6,5 @@ COPY . .
 
 RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 
-CMD ["java", "-jar", "target/*.jar"]
+# Find actual jar name and run it
+CMD ["sh", "-c", "java -jar target/*.jar"]
